@@ -1,0 +1,33 @@
+
+
+--------------------------------------
+In my current job, we use mainly the language Java with SpringBoot and also the JS framework React.
+ For the database, its depends on the project and I have worked with postgresql and mysql.
+ I worked in a public project to manager process and risks in the public administration and
+ public institution of education such universities, where i learned react and hibernate.
+ Now i'm work in a health system, and learning how to use React with Redux, Ajax requests
+ and also reinforcing my knowledge in REST requests,  Java, Html and Css. We are a small
+ team so I work in every part of the software production (front-end, back-end, data model).
+ This is my work since August 2018.
+----------------------------------------
+In my last and first job, I started with a lot of data problems to solve, so I used SQL
+ language to solve  inconsistences  problems, even in spatial data. To do that i used Groovy
+ language to access the data and create automated scripts. After that I learned MVC pattern
+ and staterd concurrently to create some pages web in Groovy and Grails with simples forms
+ using Jquery and Javascript to give some logic to fill the blanks. I worked here from
+ September 2017 to  August 2018.
+--------------------------------------
+Je suis un professionnel du secteur d'informatique et la mission de recrutement
+ Québec en tête apporte beaucoup de poste de travail dans ce secteur, alors pour
+ moi c'est une excellente opportunité pour réussir un poste de travail dans une ville
+ très belle et agréable.
+Mon projet a commencé au début de 2018 lorsque j'ai commencé à étudier français e
+ maintenant je travaille et étude des langues pour améliorer mon profil professionnel
+ et être un bon candidat à immigrer au Canada.
+---------------------------------------
+Je m'efforce beaucoup pour réussir un poste de travail au Québec parce que c'est une très
+ bonne ville avec grandes entreprises. Je suis très déterminé dans mes tâches pour faire
+ un bon travail, j'aime le secteur de technologie d'information et j'espère répondre aux
+ attentes de l'entreprise que je postule. Je suis prêt pour apprendre n'importe quoi
+ technologie, confronter les difficultés et vivre une nouvelle expérience
+----------------------------------------
