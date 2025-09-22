@@ -5,33 +5,34 @@
 \newcommand{\en}[1]{\ifen#1\fi}
 \newcommand{\fr}[1]{\iffr#1\fi}
 \newcommand{\pt}[1]{\ifpt#1\fi}
+\newcommand{\translate}[3]{\ifen#1\fi\iffr#2\fi\ifpt#3\fi}
 
-\documentclass[12pt,a3paper,sans, final]{moderncv}
-\moderncvstyle{banking}
-\moderncvcolor{burgundy}
-
-%\definecolor{color1}{rgb}{0.0 , 0.55 , 0.55} % dark grey
-%\definecolor{color0}{rgb}{0.55 , 0.05 , 0.55} % dark grey
-
-
-
-\usepackage[utf8]{inputenc}
-\usepackage[scale=0.90]{geometry}
-
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-
-\usepackage{enumitem}
-%\usepackage{fontawesome}
-\usepackage{lastpage}
-\recomputelengths
+%updated month
+\newcommand{\atualizado}[0]{\setembro 2025}
 %-----------------------------
-%chose one language, not both or tre
+%chose one language, not two or three
 \entrue %English
 %\frtrue	%Français
 %\pttrue %Português
 %-----------------------------
+\documentclass[12pt,a3paper,sans, final]{moderncv}
+\moderncvstyle{banking} % style options are 'casual' (default), 'classic', 'oldstyle' 'fancy' and 'banking'
+\moderncvcolor{burgundy} % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey', 'black' and 'burgundy'
+%\definecolor{color1}{rgb}{0.0 , 0.55 , 0.55} % dark grey
+%\definecolor{color0}{rgb}{0.55 , 0.05 , 0.55} % dark grey
 
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.90]{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{lastpage}
+\usepackage[strict]{changepage}
+\usepackage{changepage}
+%\usepackage{fontawesome}
+\recomputelengths
+
+
+%-----------------------------
 % personal data
 \newcommand{\emailum}{mnascimento0392@gmail.com}
 \newcommand{\emaildois}{weddynny@hotmail.com}
@@ -39,14 +40,12 @@
 \newcommand{\nome}{Matheus}
 \newcommand{\sobrenome}{da Silva Nascimento}
 
-\en{\address{2600, Rue de la Vendée}{Québec, QC}{\countryCN}}
-\fr{\address{2600, Rue de la Vendée}{Québec, QC}{\countryCN}}
-\pt{\address{2600, Rue de la Vendée}{Québec, QC}{\countryCN}}
-%\phone[mobile]{+55 61998382002}
+\address{2600, Rue de la Vendée -- \translate{Québec City}{Ville de Québec{Québec}} ,, QC}{\countryCN}
 \email{\emailum}
 \social[linkedin]{\username}
 \social[github]{\username}
 \name{\nome}{\sobrenome}
+%\phone[mobile]{+55 61998382002}
 %\social[skype]{weddynny}
 %skype:live:weddynny
 %\social[gitlab]{jdoe} % not working
@@ -55,94 +54,98 @@
 %\quote{Some quote}
 
 
-% ------------- variaveis
-\newcommand{\textVersion}{\en{english version.}\fr{version française.}\pt{versão portuguesa.}}
-% geral
-\newcommand{\brasil}{\en{Brazil}\fr{Brésil}\pt{Brasil}}
-\newcommand{\canada}{\en{Canada}\fr{Canada}\pt{Canadá}}
+% ------------- variaveis % geral
+\newcommand{\textVersion}{\translate{english version.}{version française.}{versão portuguesa.}}
+\newcommand{\brasil}{\translate{Brazil}{Brésil}{Brasil}}
+\newcommand{\canada}{\translate{Canada}{Canada}{Canadá}}
 \newcommand{\countryBR}{\brasil}
 \newcommand{\countryCN}{\canada}
-\newcommand{\cityBSB}{\pt{Brasília}\en{Brasilia}\fr{Brasilia}}
-\newcommand{\citySP}{\pt{São Paulo}\en{São Paulo}\fr{São Paulo}}
-\newcommand{\cityQC}{\pt{Québec}\en{Québec}\fr{Québec}}
-\newcommand{\janeiro}{\en{January }\fr{Janvier }\pt{Janeiro }}
-\newcommand{\fevereiro}{\en{February }\fr{Février }\pt{Fevereiro }}
-\newcommand{\marco}{\en{March }\fr{Mars }\pt{Março }}
-\newcommand{\abril}{\en{April }\fr{Avril }\pt{Abril }}
-\newcommand{\maio}{\en{May }\fr{Mai }\pt{Maio }}
-\newcommand{\junho}{\en{June }\fr{Juin }\pt{Junho }}
-\newcommand{\julho}{\en{July }\fr{Juillet }\pt{Julho }}
-\newcommand{\agosto}{\en{August }\fr{Août }\pt{Agosto }}
-\newcommand{\setembro}{\en{September }\fr{Septembre }\pt{Setembro }}
-\newcommand{\outubro}{\en{October }\fr{Octobre }\pt{Outubro }}
-\newcommand{\novembro}{\en{November }\fr{Novembre }\pt{Novembro }}
-\newcommand{\dezembro}{\en{December }\fr{Décembre }\pt{Dezembro }}
-\newcommand{\atual}{\en{Present}\fr{à ce jour}\pt{Atual}}
-%\newcommand{\ambiente}{\textbf{\en{Skills}\fr{Environnements}\pt{Ambiente}}
-\newcommand{\ambiente}[1]{\textbf{\en{Skills}\fr{Environnements}\pt{Ambiente}}: #1 \vspace{1.0cm}}
-\newcommand{\ambientenojump}[1]{\textbf{\en{Skills}\fr{Environnements}\pt{Ambiente}}: #1}
-\newcommand{\remoto}{ (\en{Remote}\fr{À distance}\pt{Remoto})}
-\newcommand{\desenvolvedor}{\pt{Desenvolvedor}\fr{Développeur}\en{Developer}}
-\newcommand{\programador}{\en{Programmer}\fr{Programmeur}\pt{Programador}}
+\newcommand{\cityBSB}{\translate{Brasilia}{Brasilia}{Brasília}}
+\newcommand{\citySP}{\translate{São Paulo}{São Paulo}{São Paulo}}
+\newcommand{\cityQC}{\translate{Québec}{Québec}{Québec}}
+\newcommand{\janeiro}{\translate{January }{Janvier }{Janeiro }}
+\newcommand{\fevereiro}{\translate{February }{Février }{Fevereiro }}
+\newcommand{\marco}{\translate{March }{Mars }{Março }}
+\newcommand{\abril}{\translate{April }{Avril }{Abril }}
+\newcommand{\maio}{\translate{May }{Mai }{Maio }}
+\newcommand{\junho}{\translate{June }{Juin }{Junho }}
+\newcommand{\julho}{\translate{July }{Juillet }{Julho }}
+\newcommand{\agosto}{\translate{August }{Août }{Agosto }}
+\newcommand{\setembro}{\translate{September }{Septembre }{Setembro }}
+\newcommand{\outubro}{\translate{October }{Octobre }{Outubro }}
+\newcommand{\novembro}{\translate{November }{Novembre }{Novembro }}
+\newcommand{\dezembro}{\translate{December }{Décembre }{Dezembro }}
+
+\newcommand{\atual}{\translate{Present}{à ce jour}{Atual}}
+\newcommand{\ambiente}[1]{\textbf{\translate{Skills}{Environnements}{Ambiente}}: #1}
+\newcommand{\remoto}{ (\translate{Remote}{À distance}{Remoto})}
+\newcommand{\projeto}{\translate{Project}{Projet}{Projeto}}
+
+\newcommand{\desenvolvedor}{\translate{Developer}{Développeur}{Desenvolvedor}}
+\newcommand{\programador}{\translate{Programmer}{Programmeur}{Programador}}
+
+%hrefs
+\newcommand{\reff}[1]{\href{#1}{\textcolor{blue}{\faExternalLink}}}
+\newcommand{\refWes}{\reff{https://www.credly.com/badges/8e50fab0-e3f3-4a1f-9b0e-2e855497f250}}
+\newcommand{\refEsc}{\reff{http://www.cmb.eb.mil.br/}}
+\newcommand{\refUniv}{\reff{http://international.unb.br/}}
+\newcommand{\refUm}{\reff{http://www.topocart.com.br/}}
+\newcommand{\refdoi}{\reff{http://www.topocart.com.br/}}
+\newcommand{\refDois}{\reff{http://next.unb.br/}}
+\newcommand{\refTres}{\reff{http://www.topocart.com.br/}}
+\newcommand{\refquatro}{\reff{http://www.topocart.com.br/}}
+\newcommand{\refCinco}{\reff{http://www.topocart.com.br/}}
+\newcommand{\refFor}{\reff{https://github.com/forpdi/plataforma-for}}
+
 
 %seções
-\newcommand{\sectionPerfil}{\fr{Profil}\pt{Perfil}\en{Profile}}
-\newcommand{\sectionCompetencia}{\fr{Compétences Informatiques}\pt{Competências} \en{Professional skills}}
-\newcommand{\sectionExeperiencia}{\fr{Expériences Professionnelles}\en{Work Experience}\pt{Experiência Profissional}}
-\newcommand{\sectionFormacao}{\fr{Formation}\en{Education}\pt{Formação}}
-\newcommand{\sectionComplementar}{\fr{Formations Complémentaires}\en{Trainings and Certifications
-}\pt{Formação Complementar}}
-
+\newcommand{\sectionPerfil}{\translate{Profile}{Profil}{Perfil}}
+\newcommand{\sectionCompetencia}{\translate{Professional skills}{Compétences Informatiques}{Competências}}
+\newcommand{\sectionExeperiencia}{\translate{Work Experience}{Expériences Professionnelles}{Experiência Profissional}}
+\newcommand{\sectionFormacao}{\translate{Education}{Formation}{Formação}}
+\newcommand{\sectionComplementar}{\translate{Trainings and Certifications}{Formations Complémentaires}{Formação Complementar}}
 
 %seção competencias
 %\newcommand{\textLinguas}{
-%\en{{Languages: }{Portuguese, French and English}}\fr{{Langues: }{Portugais, Français et Anglais}}\pt{{Línguas: }{Francês, Inglês e Português}};
+%\translate{{Languages: }{Portuguese, French and English}}{{Langues: }{Portugais, Français et Anglais}}{{Línguas: }{Francês, Inglês e Português}};
 %}
 %\newcommand{\textLinguagens}{
-%\en{\cvitem{Programming languages}{Java, JavaScript, React, React Native, Groovy, HTML, CSS.}}
-%\fr{\cvitem{Langages}{Java, JavaScript, React, React Native, Groovy, HTML, CSS.}}
-%\pt{\cvitem{Linguagens de programação}{Java, JavaScript, React, React Native, Groovy, HTML, CSS.}}
+%\translate{\cvitem{Programming languages}{Java, JavaScript, React, React Native, Groovy, HTML, CSS.}}
+%{\cvitem{Langages}{Java, JavaScript, React, React Native, Groovy, HTML, CSS.}}
+%{\cvitem{Linguagens de programação}{Java, JavaScript, React, React Native, Groovy, HTML, CSS.}}
 %}
 %\newcommand{\textFerramentas}{
-%\en{\cvitem{Developer Tools}{Eclipse, Netbeans, VScode, Git, Jenkins, Docker, CMS.}}
-%\fr{\cvitem{Outils de développement}{Eclipse, Netbeans, VScode, Git, Jenkins, Docker, CMS.}}
-%\pt{\cvitem{Ferramentas de Desenvolvimento}{Eclipse, Netbeans, VScode, Git, Jenkins, Docker, CMS.}}
+%\translate{\cvitem{Developer Tools}{Eclipse, Netbeans, VScode, Git, Jenkins, Docker, CMS.}}
+%{\cvitem{Outils de développement}{Eclipse, Netbeans, VScode, Git, Jenkins, Docker, CMS.}}
+%{\cvitem{Ferramentas de Desenvolvimento}{Eclipse, Netbeans, VScode, Git, Jenkins, Docker, CMS.}}
 %}
 %\newcommand{\textBD}{
-%\en{\cvitem{Database}{PostgresSQL/PostGIS, MySQL.}}
-%\fr{\cvitem{Base de données}{PostgresSQL/PostGIS, MySQL.}}
-%\pt{\cvitem{Banco de Dados}{PostgresSQL/PostGIS, MySQL.}}
+%\translate{\cvitem{Database}{PostgresSQL/PostGIS, MySQL.}}
+%{\cvitem{Base de données}{PostgresSQL/PostGIS, MySQL.}}
+%{\cvitem{Banco de Dados}{PostgresSQL/PostGIS, MySQL.}}
 %}
 
 
 % seção de formação escola
-\newcommand{\univ}{\en{University of Brasilia - UnB}\fr{Université de Brasilia - UnB}\pt{Universidade de Brasília - UnB} \href{http://international.unb.br/}{\textcolor{blue}{\faExternalLink}}}
-\newcommand{\diploma}{\en{Bachelor's degree in computer engineering}\fr{Diplôme de baccalauréat en génie informatique}\pt{Diploma de bacharel em engenharia de computação} \href{https://www.credly.com/badges/8e50fab0-e3f3-4a1f-9b0e-2e855497f250}{\textcolor{blue}{\faExternalLink}}}
-\newcommand{\textUniv}{\cventry{}{\univ}{\diploma}{\agosto 2011-- \agosto 2016}{}{}}
+\newcommand{\univ}{\translate{University of Brasilia - UnB}{Université de Brasilia - UnB}{Universidade de Brasília - UnB} \refUniv}
+\newcommand{\diploma}{\translate{Bachelor's degree in computer engineering}{Diplôme de baccalauréat en génie informatique}{Diploma de bacharel em engenharia de computação} \refWes}
+\newcommand{\textUniv}{\cventry{\cityBSB, \countryBR}{\univ}{\diploma}{\agosto 2011-- \agosto 2016}{}{}}
 
-
-%\newcommand{\hrefesc}{\href{http://www.cmb.eb.mil.br/}{\textcolor{blue}{\faExternalLink}}}
-%\newcommand{\textEscola}{
-%\en{\cventry{2004--2010}{Military School of Brasilia \hrefesc}{Secondary grade diploma}{\cityBSB, \countryBR}{}{\hfill}}
-%\fr{\cventry{2004--2010}{École Militaire de Brasilia \hrefesc}{Diplôme d’études secondaires}{\cityBSB, \countryBR}{}{\hfill}}
-%\pt{\cventry{2004--2010}{Colégio Militar de Brasília \hrefesc}{Ensino Fundamental e Médio}{\cityBSB, \countryBR}{}{\hfill}}
-%}
+\newcommand{\escola}{\translate{Military School of Brasilia}{École Militaire de Brasilia}{Colégio Militar de Brasília} \refEsc}
+\newcommand{\diplomaEsc}{\translate{Elementary and Secondary school diploma}{Diplôme d'études primaires et secondaires}{Certificado de ensino fundamental e médio}}
+\newcommand{\textEscola}{\cventry{\cityBSB, \countryBR}{\escola}{\diplomaEsc}{2004--2010}{}{}}
 
 % seção de formação complementar
 \newcommand{\textComplementUm}{
-\en{\cventry{2017}{Programming course 40h, Caelum (\brasil) \hfill}{Java for Web Development}{}{(Java, Spring MVC, Servlets, JDBC, Hibernate)}{\hfill}}
-\fr{\cventry{2017}{Cours d'informatique 40h, Caelum (\brasil) \hfill}{Java pour le développement Web}{}{(Java, Spring MVC, Servlets, JDBC, Hibernate)}{\hfill}}
-\pt{\cventry{2017}{Curso de informática 40h, Caelum (\brasil) \hfill}{Java para o desenvolvimento Web}{}{(Java, Spring MVC, Servlets, JDBC, Hibernate)}{\hfill}}
+\cventry{2017}{\translate{Programming course 40h}{Cours d'informatique 40h}{Curso de informática 40h}, Caelum (\brasil)\hfill}{\translate{Java for Web Development}{Java pour le développement Web}{Curso Java para o desenvolvimento Web}}{}{(Spring, Git, JUnit, Maven)}{\hfill}
 }
 
 \newcommand{\textComplementDois}{
-\en{\cventry{2017}{Programming course 20h, Caelum (\brasil)\hfill}{Develop in practice with Spring and testing}{}{(Spring, Git, JUnit, Maven)}{\hfill}}
-\fr{\cventry{2017}{Cours d'informatique 20h, Caelum \brasil)\hfill}{Développer en pratique avec Spring et tests}{}{(Spring, Git, JUnit, Maven)}{\hfill}}
-\pt{\cventry{2017}{Curso de informática 20h, Caelum (\brasil)\hfill}{Curso Desenvolvendo na prática com Spring e testes}{}{(Spring, Git, JUnit, Maven)}{\hfill}}
+\cventry{2017}{\translate{Programming course 20h}{Cours d'informatique 20h}{Curso de informática 20h}, Caelum (\brasil)\hfill}{\translate{Develop in practice with Spring and testing}{Développer en pratique avec Spring et tests}{Curso Desenvolvendo na prática com Spring e testes}}{}{(Spring, Git, JUnit, Maven)}{\hfill}
 }
 
 \newcommand{\textComplementTres}{
-\cventry{2020}{\en{Certification}\fr{Certification}\pt{Certificado}}{OCA Java SE 8 Programmer (1Z0-808) {\href{https://www.credly.com/badges/2406402e-3045-4ff3-ae26-8c965c4878fa}{\textcolor{blue}{\faExternalLink}}}}{}{Oracle}{ \hfill}
+\cventry{2020}{\translate{Certification}{Certification}{Certificado}}{OCA Java SE 8 Programmer (1Z0-808) \reff{https://www.credly.com/badges/2406402e-3045-4ff3-ae26-8c965c4878fa}}{}{Oracle}{ \hfill}
 }
 
 
@@ -153,23 +156,23 @@
 %\fancyhf{}
 %\fancyhead[L]{\section{ texto (suite)}}
 
-\newcommand{\atualizado}[0]{\pt{Atualizado em}\fr{Mise à jour}\en{Last Updated in} \setembro 2025}
+
 
 %\renewcommand{\footrulewidth}{0.8pt}% Footer rule
-%\fancyfoot[L]{\scriptsize{Curriculum Vitae - Matheus da Silva Nascimento - \pt{Atualizado em}\fr{Mise à jour}\en{Last Updated in} \abril 2020}}% Left footer
+%\fancyfoot[L]{\scriptsize{Curriculum Vitae - Matheus da Silva Nascimento - {Atualizado em}{Mise à jour}\translate{Last Updated in} \abril 2020}}% Left footer
 %\fancyfoot[R]{\thepage{} of \pageref{LastPage}}% Right footer
 
 
- % \fancyfoot[L]{\scriptsize{Curriculum Vitae - Matheus da Silva Nascimento - \pt{Atualizado em}\fr{Mise à jour}\en{Last Updated in} \marco 2020}}% Left footer
+ % \fancyfoot[L]{\scriptsize{Curriculum Vitae - Matheus da Silva Nascimento - {Atualizado em}{Mise à jour}\translate{Last Updated in} \marco 2020}}% Left footer
   %\fancyfoot[R]{\thepage{} of \pageref{LastPage}}% Right footer
-  
-\fancypagestyle{capa}{%
+\pagestyle{fancy}
+\fancypagestyle{capa}{
   \fancyhf{}
-  \fancyfoot[L]{\scriptsize{Curriculum Vitae -- \nome \sobrenome \hspace{0cm} -- \atualizado}}% Left footer
-  \fancyfoot[R]{\thepage{} \en{of}\fr{de}\pt{de} \pageref{LastPage}}% Right footer
+  \fancyfoot[L]{\scriptsize{Curriculum Vitae -- \nome \sobrenome \hspace{0cm} -- \translate{Last Updated in}{Atualizado em}{Mise à jour} \atualizado}}% Left footer
+  \fancyfoot[R]{\thepage{} \translate{of}{de}{de} \pageref{LastPage}}% Right footer
 }
 
-\fancypagestyle{resto}{%
+\fancypagestyle{resto}{
   \fancyhf{}
   \renewcommand{\headrulewidth}{0pt}
   \fancyhead[C]{\footnotesize{TOC \thepage}}
@@ -187,7 +190,7 @@
 \date{\setembro 18, 2025}
 \opening{Dear Sir or Madam,}
 \closing{Yours faithfully,}
-\enclosure[Attached]{curriculum vit\ae{}} % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\enclosure[Attached]{curriculum vit\ae{}} % use an optional argument to use a string other than "Enclosure", or redefine \translateclname
 \makelettertitle
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam.
@@ -201,152 +204,165 @@ lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam a
 
 Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut
 fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
-
 \makeletterclosing
 \clearpage
 
 %-----       resume       ---------------------------------------------------------
-
-
-
-
 \makecvtitle
 %\textVersion
-
 % ------------- profil ------------- 
 %\section{\sectionPerfil}
-
 %\begin{itemize}%
-%\item {\fr{2 ans d'expérience en développement WEB et 1 an en programmation de scripts Groovy et SQL}\en{2 years of experience in WEB development and 1 year in programming Groovy and SQL scripts}\pt{2 anos de experiência em desenvolvimento WEB e 1 ano em programação de scripts Groovy e SQL}};
-%\item {\fr{Facilité d’apprentissage}\en{Ease to learning}\pt{Facilidade de aprendisagem}};
-%\item {\fr{Capacité à travailler en équipe}\en{Ability to work in a team}\pt{Capacidade de trabalho em equipe}};
-%\item {\fr{Ouvert à nouveaux défis}\en{Open to new challenges}\pt{Aberto à novos desafios}};
+%\item {{2 ans d'expérience en développement WEB et 1 an en programmation de scripts Groovy et SQL}\translate{2 years of experience in WEB development and 1 year in programming Groovy and SQL scripts}{2 anos de experiência em desenvolvimento WEB e 1 ano em programação de scripts Groovy e SQL}};
+%\item {{Facilité d'apprentissage}\translate{Ease to learning}{Facilidade de aprendisagem}};
+%\item {{Capacité à travailler en équipe}\translate{Ability to work in a team}{Capacidade de trabalho em equipe}};
+%\item {{Ouvert à nouveaux défis}\translate{Open to new challenges}{Aberto à novos desafios}};
 %\item {\textLinguas}
 %\end{itemize}
-
-
 % ------------- competencias ------------- 
 %\section{\sectionCompetencia}
-
 %\textLinguagens
 %\textFerramentas
 %\textBD
-
-
 % ------------- experiencia ------------- 
 \section{\sectionExeperiencia}
 
-\cventry{\cityQC, \countryCN \remoto}{Paradigme3 {\href{https://paradigme3.ca/}{\textcolor{blue}{\faExternalLink}}}}{\pt{Desenvolvedor Full Stack}\fr{Analyste Programmeur }\en{Programmer Analyst}}{\outubro 2022 -- \atual}{\pt{}\fr{Services-conseils en TI}\en{IT Consulting Services}}{}{
+\newcommand{\expCinco}{\cventry
+{\cityQC, \countryCN \remoto}{Paradigme3 {\refCinco{https://paradigme3.ca/}}}{\pt{Desenvolvedor Full Stack}\fr{Analyste Programmeur }\en{Programmer Analyst}}{\outubro 2022 -- \atual}{\pt{}\fr{Services-conseils en TI}\en{IT Consulting Services}}{}{
   \vspace{-0.4cm}
     \cventry{\junho 2024 -- \atual}{\ \ \ \ \ \ Mandate: Ministère de la Santé et des Services sociaux}{}{}{project: modernization WSTAT}{}{
-        \begin{itemize}[leftmargin=1.8cm,  parsep=0cm,  topsep=-0.25cm]
-            \item{\en{test}\fr{test}}
+        \begin{itemize}[leftmargin=1.8cm, parsep=0cm, topsep=-0.25cm]
+           \item{\translate{}{}{};}
+            \item{\translate{}{}{};}
         \end{itemize}
         \vspace{0.4cm}
-        \hspace{1cm}\ambientenojump{Angular (TypeScript, PrimeNg, Bootstrap), Java 17 (Quarkus, Maven, JUnit, Hibernate), Azure Data Studio, VScode, IntelliJ, Git, Docker, REST, Swagger, Azure Devops, Azure Data Studio, Docker, Kubernetes, Agile, Microsoft Teams. }
+        \hspace{1cm}\ambiente{Angular (TypeScript, PrimeNg, Bootstrap), Java 17 (Quarkus, Maven, JUnit, Hibernate), Azure Data Studio, VScode, IntelliJ, Git, Docker, REST, Swagger, Azure Devops, Azure Data Studio, Docker, Kubernetes, Agile, Microsoft Teams. }
     }
     \\
     \cventry{\outubro 2022 -- \junho 2024}{\ \ \ \ \ \ Mandate: Ministère de la Santé et des Services sociaux}{}{}{project: SIPAD}{}{
-        \begin{itemize}[leftmargin=1.8cm,  parsep=0cm,  topsep=-0.25cm]
+        \begin{itemize}[leftmargin=1.8cm, parsep=0cm, topsep=-0.25cm]
             \item{\en{test}\fr{test}}
+            v
         \end{itemize}
         \vspace{0.4cm}
         \hspace{1cm}\ambiente{Java (Maven, Struts 1.3, Tomcat), JMeter, VisualVM, IReports, Eclipse, Git, GitLab, Sourcetree, Oracle SQL Developer, Microsoft Teams, Agile, Jira. }
     }
-}
+}}
 
 % ------------- experiencia ------------- 
-\cventry
-{\citySP, \countryBR \remoto}{Stefanini Group {\href{https://stefanini.com/en}{\textcolor{blue}{\faExternalLink}}}}{\pt{Desenvolvedor Full Stack}\fr{Développeur FullStack}\en{FullStack Developer}}{\junho 2021 -- \outubro 2022}{\pt{}\fr{Conseil en stratégie digitale}\en{Global Tech Consultancy}}{}{
-        \begin{itemize}[leftmargin=1cm,  parsep=0.1cm,  topsep=-0.25cm]
-            \item{\en{test}\fr{test}}
+\newcommand{\expQuatro}{\cventry
+{\citySP, \countryBR \remoto}{Stefanini Group {\refQuatro{https://stefanini.com/en}}}{\pt{Desenvolvedor Full Stack}\fr{Développeur FullStack}\en{FullStack Developer}}{\junho 2021 -- \outubro 2022}{\pt{}\fr{Conseil en stratégie digitale}\en{Global Tech Consultancy}}{}{
+        \begin{itemize}[leftmargin=1cm, parsep=0.1cm, topsep=-0.25cm]
+            \item{\translate{}{}{};}
+            \item{\translate{}{}{};}
         \end{itemize}
          \vspace{0.4cm}
 \hspace{1cm}\ambiente{AngularJS (JavaScript, Bootstrap, Grunt, Karma, JasmineJS), Angular (TypeScript, PrimeNg, PrimeFlex, Karma, JasmineJS), Java (Quarkus, Maven, JUnit), VScode, Eclipse, Git, Gitlab, Swagger, Docker, SonarQube, Highcharts, DBeaver, REST, Agile, VMware Virtual Desktop Infrastructure (VDI), Jenkins, Artifactory, Kubernetes, Microsoft Teams. }
-}
+}}
 
 % ------------- experiencia ------------- 
-\cventry
-{\citySP, \countryBR \remoto}{Gauge - Stefanini Group {\href{https://gauge-next-challenge.vercel.app/}{\textcolor{blue}{\faExternalLink}}}}{\pt{Desenvolvedor Full Stack}\fr{Développeur FullStack}\en{FullStack Developer}}{\setembro 2020 -- \junho 2021}{\pt{}\fr{Conseil en stratégie digitale}\en{Digital Consulting}}{}{
-        \begin{itemize}[leftmargin=1cm,  parsep=0.1cm,  topsep=-0.25cm]
-            \item{\en{test}\fr{test}}
+\cventry{\citySP, \countryBR \remoto}{Gauge - Stefanini Group \reff{https://gauge-next-challenge.vercel.app/}}{\translate{FullStack Developer}{Développeur FullStack}{Desenvolvedor Full Stack}}{\setembro 2020 -- \junho 2021}{\translate{Digital Consulting}{Conseil en stratégie digitale}{}}{}{
+    \medskip
+    \begin{adjustwidth}{1cm}{0cm}
+        \underline{\projeto: Yazigi Yconnect  e Pearson WizTab} - \translate{Online platform for language courses}{}{}.
+         \medskip
+        \begin{itemize}[leftmargin=1cm, parsep=0.1cm, topsep=-0.25cm]
+             \item{\translate{}{}{};}
+            \item{\translate{}{}{};}
         \end{itemize}
-         \vspace{0.4cm}
-\hspace{1cm}\ambiente{ReactJS(TypeScript, Bootstrap, Axios, NPM), VScode, Git, Gitflow, Bitbucket, Github, Microsoft SQL Server, Agile, Asana, TaskRow, ServiceNow, JIRA.}
+        \bigskip
+    \ambiente{ ReactJS \& React Native (TypeScript, Axios, Bootstrap), Microsoft SQL Server, Gitflow, Bitbucket, ServiceNow, AWS Lambda, Github, Agile.} % Asana, VScode, TaskRow, JIRA.
+    \bigskip
+    \end{adjustwidth}
 }
 
 % ------------- experiencia ------------- 
-\cventry
-{\cityBSB, \countryBR}{NExT UnB {\href{http://next.unb.br/}{\textcolor{blue}{\faExternalLink}}}}{{\desenvolvedor} WEB}{\agosto 2018 -- \setembro 2020}{\pt{Núcleo de Pesquisa e Desenvolvimento para Excelência e Transformação do Setor Público (UnB)} \fr{Centre de recherche et développement pour le secteur public (UnB)}\en{Research and Development Center for Excellence and Transformation of the Public Sector}}{}{
-        \begin{itemize}[leftmargin=1cm,  parsep=0.1cm,  topsep=-0.25cm]
-            \item{\en{test}\fr{test}}
+\cventry{\cityBSB, \countryBR}{NExT UnB \refDois }{{\desenvolvedor} WEB}{\agosto 2018 -- \setembro 2020}{\pt{Núcleo de Pesquisa e Desenvolvimento para Excelência e Transformação do Setor Público (UnB)} \fr{Centre de recherche et développement pour le secteur public (UnB)}\en{Research and Development Center for Excellence and Transformation of the Public Sector}}{}{
+    \medskip
+    \begin{adjustwidth}{1cm}{0cm}
+    %\cventry{1}{}{projeto evobiz ticshealth}{agosto 2018 -- janeiro 2020 }{}{6}{7}
+        \underline{\projeto: Evobiz Ticshealth (\abril 2020 -- \setembro 2020)} - \translate{TicsHealth is a technology from Evobiz to promote efficiency in health organizations}{TicsHealth est une technologie d'Evobiz pour promouvoir l'efficacité dans les organisations de santé}{O TicsHealth é uma tecnologia da Evobiz para promover eficiência em organizações da Saúde}.
+        \medskip
+        \begin{itemize}[leftmargin=1cm, parsep=0.1cm, topsep=-0.25cm]
+            \item{\translate{Participated in the architecture planning and development of web and mobile platforms}{Participé à la planification de l'architecture et au développement des plateformes web et mobile}{Participou do planejamento da arquitetura e do desenvolvimento das plateformas Web e mobile};}
+            \item{\translate{Integrated the platform with the Philips Tasy and InterSystem Healthcare systems to expand the application for multiple customers}{Avez fait l'intégration avec les systèmes Philips Tasy et InterSystem Healthcare pour étendre l'application à de multiples clients}{Efetuou a integraçãoda plataforma com os sistemas Philips Tasy et InterSystem Healthcare para expandir a aplicação para múltiplos clientes};}
+            \item{\translate{Created mechanisms of notifications via mobile application, email, SMS and internal messaging system of the platform}{Avez créé des mécanismes de notification via l'application mobile, courriel, SMS et le système de messagerie interne de la plateform}{Criou mecanismos de notificações via aplicativo mobile, email, SMS e sistema de mensagens interna da plataforma}}
         \end{itemize}
-         \vspace{0.4cm}
-\ambientenojump{Java (Spring Boot, Spring MVC, Spring Data JPA, Maven, Criteria Query), ReactJS \& React Native (JavaScript, Axios, Bootstrap, NPM), PostgreSQL, REST, Git, Eclipse, VScode, Docker, Postman, Firebase.}\\
-\hspace{1cm}\ambiente{Java (Vraptor4, Maven, Wildfly, Hibernate, HSQL, JMeter), ReactJS(JavaScript, Bootstrap, AJAX), REST, MySQL, Git, GitHub, Eclipse, VScode, Postman, Slack, Joomla.}
-}
-
-% ------------- experiencia ------------- 
-\cventry
-{\cityBSB, \countryBR}{Topocart {\href{http://www.topocart.com.br/}{\textcolor{blue}{\faExternalLink}}} }{\programador}{\setembro 2017 -- \agosto 2018}{\pt{Empresa de levantamento de dados, geoprocessamento, topografia}\fr{Entreprise de collecte de données; géotraitement; topographie}\en{Data collection; geoprocessing; topography}.}{}{
-        \begin{itemize}[leftmargin=1cm,  parsep=0.1cm,  topsep=-0.25cm]
-            \item{\en{test}\fr{test}}
+        \bigskip
+        \ambiente{Java (Spring Boot, JPA, Maven, Criteria Query), ReactJS \& React Native (Axios, Bootstrap), PostgreSQL, REST, Docker, Git, Firebase.} %JavaScript, Eclipse, VScode,  Postman}
+        \bigskip
+        
+        \underline{\projeto: PlataformaFor (\agosto 2018 -- \abril 2020)} - \translate{Open-source \refFor \hspace{0cm} tools to automate the administrative and budgetary processes of universities and public institutions. Currently 47 federal universities and 25 federal institutes use the platforms}{Outils open-source \refFor \hspace{0cm} pour automatiser les processus administratifs et budgétaires des universités et institutions publiques. Actuellement 47 universités fédérales et 25 instituts fédéraux utilisent les plates-formes}{Ferramentas open-source \refFor \hspace{0cm} para automatizar os processos administrativos e orçamentários des universidades e instituições públicas. Atualmente 47 universidades federais e 25 institutos federais utilizam as plataformas}.
+        \medskip
+        \begin{itemize}[leftmargin=1cm, parsep=0.1cm, topsep=-0.0cm]
+            \item{\translate{Worked in the conception of the platform and in the process of modeling the database from the specifications}{Avez travaillé sur la conception de la plateforme et sur le processus de modélisation de la base de données à partir des spécifications.}{Atuei na concepção da plataforma e no processo de modelagem do banco de dados à partir das especificações};}
+            \item{\translate{Optimized slow functions, duplicated requests to the backend and database and made corrections of documented \textit{issues}}{Avez optimisé les fonctions lentes, les requêtes en double vers le back-end et la base de données et effectué des corrections de \textit{issues} documentés}{Otimizei funções lentas, requisições duplicadas ao backend e ao banco de dados e efetuei correções de \textit{issues} documentadas};}
+            \item{\translate{Used Jmeter to detect and correct bottlenecks and slowdowns on the platform when simulating multiple concurrent users}{Avez Utilisé Jmeter pour détecter et corriger les goulots d'étranglement et les ralentissements sur la plateforme en simulant plusieurs utilisateurs simultanés}{Utilisei Jmeter para econtrar e corrigir pontos de gargalo e lentidão na plataforma ao simular vários usuários simultaneos};}
+            \item{\translate{Developed tools to generate PDFs reports and to generate backup files as a way of importing/exporting data on the platform.}{Avez Développé des outils pour générer des rapports PDFs et pour générer des fichiers de \textit{backup} comme moyen d'importation/exportation des données sur la plateforme.}{Desenvolvi ferramentas para gerar relatórios PDF e para gerar arquivos de \textit{backup} como forma de importação/exportação dos dados na plataforma}}
         \end{itemize}
-         \vspace{0.4cm}
-\hspace{1cm}\ambiente{Groovy (Grails), JavaScript (Jquery, JasmineJS), Selenium, PostgreSQL, PostGIS, Jenkins, Subversion, Git, JasperReports, Qgis, Netbeans, PuTTY, Linux}
+        \bigskip
+        \ambiente{Java (Maven, Hibernate, JMeter), ReactJS (Bootstrap, AJAX), REST, MySQL, Git.} %, Eclipse, VScode, Postman, Slack}
+        \bigskip
+    \end{adjustwidth}
+%\hspace{1cm}\ambiente{Java (Spring Boot, Spring MVC, Spring Data JPA, Maven, Criteria Query), ReactJS \& React Native (JavaScript, Axios, Bootstrap, NPM), PostgreSQL, REST, Git, Eclipse, VScode, Docker, Postman, Firebase.}\\
+%\hspace{1cm}\ambiente{Java (Vraptor4, Maven, Wildfly, Hibernate, HSQL, JMeter), ReactJS(JavaScript, Bootstrap, AJAX), REST, MySQL, Git, GitHub, Eclipse, VScode, Postman, Slack, Joomla}
 }
 
 % ------------- experiencia ------------- 
-%\cventry{\cityBSB, \countryBR}{Superior Tribunal de Justiça - STJ {\href{http://international.stj.jus.br/}{\textcolor{blue}{\faExternalLink}}} }{\pt{Estágio}\fr{Stage}\en{Internship}}{\maio 2014 -- \dezembro 2015}{\en{Superior Court of Justice}\fr{Supérieur Court de Justice}\pt{}.}{}{
+\cventry{\cityBSB, \countryBR}{Topocart \refUm}{\programador}{\setembro 2017 -- \agosto 2018}{\translate{Data collection; geoprocessing; topography}{Empresa de levantamento de dados, geoprocessamento, topografia}{Entreprise de collecte de données; géotraitement; topographie}.}{}{
+    \medskip
+    \begin{adjustwidth}{1cm}{0cm}
+        \underline{\projeto: Topovision} - \translate{Geographic system to measure demographic information}{Système géographique pour mesurer les informations démographiques}{Sistema geográfico para medir informações demográficas}.
+         \medskip
+        \begin{itemize}[leftmargin=1cm, parsep=0.1cm, topsep=-0.25cm]
+            \item{\translate{Created literal and spatial queries to combine custom filters for the platforme Topovision}{Créer des requêtes littérales et spatiales pour combiner des filtres personnalisés pour la plateforme Topovision};}
+            \item{\translate{Created automated scripts to verify the integrity of collected data}{Avez créé des scripts automatisés pour vérifier l'intégrité des données collectées};}
+             \item{\translate{Deployed a Jenkins's server to automate analytics and increase speed in data correction by internal employees}{Avez implanté un serveur Jenkins pour automatiser l'analyse et augmenter la vitesse de correction des données par les employés internes};}
+             \item{\translate{Deployed a local Git server and migrated all the projects from subversion}{Avez implanté un serveur Git local et migré tous les projets de Subversion};}
+             \item{\translate{Planned automated and functional tests in the application}{Avez a planifié des tests automatisés et fonctionnels dans l'application};}
+        \end{itemize}
+        \bigskip
+    \ambiente{Groovy (Grails), JavaScript (Jquery, JasmineJS), Selenium, PostgreSQL, PostGIS, Jenkins, Subversion, Git, JasperReports, Qgis, Linux.}%, Netbeans, PuTTY,*/ Linux}
+    \end{adjustwidth}
+}
+
+% ------------- experiencia ------------- 
+%\cventry{\cityBSB, \countryBR}{Superior Tribunal de Justiça - STJ {\reff{http://international.stj.jus.br/}} }{{Estágio}{Stage}\translate{Internship}}{\maio 2014 -- \dezembro 2015}{\translate{Superior Court of Justice}{Supérieur Court de Justice}{}.}{}{
 %    \begin{itemize}[leftmargin=1.8cm,  parsep=0cm,  topsep=-0.25cm]
-%    \item {\pt{Acompanhar o suporte a usuários e clientes na utilização de software}\fr{Accompagner le support aux utilisateurs et aux clients dans l'utilisation du logiciel}\en{Support the users and customers in the use of the software}};
-%    \item {\pt{Acompanhamento das instalações de redes, micros e comunicação de dados}\fr{Accompagnement d'installation de réseaux, d'ordinateurs et de la communication de données}\en{Support for the installation of networks, computers and data communication}};
-%    \item {\pt{Realizar manutenção de equipamentos conectados em rede}\fr{Réaliser la maintenance d'équipements connectés à internet}\en{Carry out maintain equipment connected to the internet}};
+%    \item {{Acompanhar o suporte a usuários e clientes na utilização de software}{Accompagner le support aux utilisateurs et aux clients dans l'utilisation du logiciel}\translate{Support the users and customers in the use of the software}};
+%    \item {{Acompanhamento das instalações de redes, micros e comunicação de dados}{Accompagnement d'installation de réseaux, d'ordinateurs et de la communication de données}\translate{Support for the installation of networks, computers and data communication}};
+%    \item {{Realizar manutenção de equipamentos conectados em rede}{Réaliser la maintenance d'équipements connectés à internet}\translate{Carry out maintain equipment connected to the internet}};
 %    \end{itemize}}
-
-
 % ------------- Formação escolar ------------- 
 \section{\sectionFormacao}
 \textUniv
 %\textEscola
-
 % ------------- Línguas ------------- 
 %\section{Languages}
 %\cvitemwithcomment{Portugais}{Natif}{}
 %\cvitemwithcomment{Anglais}{ Intermediaire}{}
 %\cvitemwithcomment{Français}{Debutant}{}
-
+% ------------- Certificados e Treinamentos ------------- 
 \section{\sectionComplementar}
 \textComplementTres
-\textComplementDois
-\textComplementUm
-%\cventry{2017}{\fr{Certificate de informatique, Caelum (Bréseil)}\en{Certificate, Caelum (Brazil)}}{{\desenvolvedor} WEB}{}{}{}
-
-
-
+%\textComplementDois
+%\textComplementUm
 % ----------------------------------------------
-%\hfill \break
-
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}
 \end{document}
 
 
+\vspace{5mm}
+\vfill
+\smallskip
+\medskip
+\bigskip
+\qquad
+\hfill
+\hspace{5mm}
+\break
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+linkar cada experiencia com as ferramentas?
 
 
 %Concevoir
@@ -359,12 +375,10 @@ fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitu
 %Appoyer
 
 
-
-
-% https://github.com/xdanaux/moderncv/blob/master/manual/moderncv_userguide.v2.pdf
+%https://ctan.mirror.globo.tech/macros/latex/contrib/moderncv/manual/moderncv_userguide.pdf
 %https://github.com/xdanaux/moderncv/blob/master/examples/template.tex
-% file:///E:/Downloads/fontawesome.pdf
 % ou http://linorg.usp.br/CTAN/fonts/fontawesome/doc/fontawesome.pdf
+
 
 %\section{Autres Informations}
 %\begin{cvcolumns}
@@ -372,6 +386,7 @@ fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitu
 %  \cvcolumn{Category 2}{Amongst others:\begin{itemize}\item Person 1, and\item Person 2\end{itemize}(more upon request)}
 %  \cvcolumn[0.5]{All the rest \& some more}{\textit{That} person, and \textbf{those} also (all available upon request).}
 %\end{cvcolumns}
+
 
 %exemplo de seção
 %\section{Profil}
@@ -390,58 +405,4 @@ fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitu
 %\newline{}%}
 
 
-
-
-
-%opções de formatação da página
-%\documentclass[12pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
-
-% modern themes
-%\moderncvstyle{banking} % style options are 'casual' (default), 'classic', 'oldstyle' 'fancy' and 'banking'
-%\moderncvcolor{red}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}
-
-% character encoding
-%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
-
-% adjust the page margins
-%\usepackage[scale=0.75]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
-
-
-
-
-
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-%\nocite{*}
-%\bibliographystyle{plain}
-%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
-
-
-
-
-%\vspace{5mm}
-%Inserts a vertical spaces whose length is 5mm. Other LATEX units can be used with this command.
-
-%\vfill
 %Inserts a blank space that will stretch accordingly to fill the vertical space available. That's why the line "Text at the bottom of the page." is moved to the bottom, and the rest of the space is filled in.There are other three commands commonly used to insert vertical blank spaces
-
-%\smallskip
-%Adds a 3pt space plus or minus 1pt depending on other factors (document type, available space, etc)
-%\medskip
-%Adds a 6pt space plus or minus 2pt depending on other factors (document type, available space, etc)
-%\bigskip
-%Adds a 12pt space plus or minus 4pt depending on other factors (document type, available space, etc)
