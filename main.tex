@@ -44,7 +44,7 @@
 \address{2600, Rue de la Vendée -- \translate{Québec City}{Ville de Québec{Québec}} ,, QC}{\countryCN}
 \email{\emailum}
 \social[linkedin]{\username}
-\social[github]{\username}
+\social[GitHub]{\username}
 \name{\nome}{\sobrenome}
 %\phone[mobile]{+55 61998382002}
 %\social[skype]{weddynny}
@@ -78,26 +78,29 @@
 \newcommand{\dezembro}{\translate{December }{Décembre }{Dezembro }}
 
 \newcommand{\atual}{\translate{Present}{à ce jour}{Atual}}
-\newcommand{\ambiente}[1]{\textbf{\translate{Skills}{Environnements}{Ambiente}}: #1}
+\newcommand{\ambiente}[1]{\textbf{\translate{Stack}{Environnements}{Ambiente}}: #1}
 \newcommand{\remoto}{ (\translate{Remote}{À distance}{Remoto})}
 \newcommand{\projeto}{\translate{Project}{Projet}{Projeto}}
+\newcommand{\mandato}{\translate{Mandate}{Mandate}{Mandato}}
 
 \newcommand{\desenvolvedor}{\translate{Developer}{Développeur}{Desenvolvedor}}
 \newcommand{\programador}{\translate{Programmer}{Programmeur}{Programador}}
+\newcommand{\analista}{\translate{Analyst}{Analyste}{Analista}}
+\newcommand{\msss}{\translate{Ministry of Health and Social Services}{Ministère de la Santé et des Services sociaux}{}}
+
+
 
 %hrefs
 \newcommand{\reff}[1]{\href{#1}{\textcolor{blue}{\faExternalLink}}}
 \newcommand{\refWes}{\reff{https://www.credly.com/badges/8e50fab0-e3f3-4a1f-9b0e-2e855497f250}}
 \newcommand{\refEsc}{\reff{http://www.cmb.eb.mil.br/}}
+\newcommand{\refFor}{\reff{https://github.com/forpdi/plataforma-for}}
 \newcommand{\refUniv}{\reff{http://international.unb.br/}}
 \newcommand{\refUm}{\reff{http://www.topocart.com.br/}}
-\newcommand{\refdoi}{\reff{http://www.topocart.com.br/}}
 \newcommand{\refDois}{\reff{http://next.unb.br/}}
 \newcommand{\refTres}{\reff{https://gauge-next-challenge.vercel.app/}}
 \newcommand{\refQuatro}{\reff{https://stefanini.com/en}}
-\newcommand{\refCinco}{\reff{http://www.topocart.com.br/}}
-\newcommand{\refFor}{\reff{https://github.com/forpdi/plataforma-for}}
-
+\newcommand{\refCinco}{\reff{https://paradigme3.ca/}}
 
 %seções
 \newcommand{\sectionPerfil}{\translate{Profile}{Profil}{Perfil}}
@@ -149,6 +152,29 @@
 \cventry{2020}{\translate{Certification}{Certification}{Certificado}}{OCA Java SE 8 Programmer (1Z0-808) \reff{https://www.credly.com/badges/2406402e-3045-4ff3-ae26-8c965c4878fa}}{}{Oracle}{ \hfill}
 }
 
+% recipient data
+\newcommand{\cover}{
+\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+\date{\setembro 18, 2025}
+\opening{Dear Sir or Madam,}
+\closing{Yours faithfully,}
+\enclosure[Attached]{curriculum vit\ae{}} % use an optional argument to use a string other than "Enclosure", or redefine \translateclname
+\makelettertitle
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam.
+Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante
+elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+
+Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar
+tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula
+ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet,
+lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+
+Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut
+fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+\makeletterclosing
+\clearpage
+}
 
 %\newcommand{\sectiontitle}{}
 %\newcommand{\newsection}[1]{\section{#1}\renewcommand{\sectiontitle}{#1}}
@@ -186,28 +212,7 @@
 %\include{paginainicial}
 \pagestyle{capa}
 %-----       letter       ---------------------------------------------------------
-% recipient data
-\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
-\date{\setembro 18, 2025}
-\opening{Dear Sir or Madam,}
-\closing{Yours faithfully,}
-\enclosure[Attached]{curriculum vit\ae{}} % use an optional argument to use a string other than "Enclosure", or redefine \translateclname
-\makelettertitle
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam.
-Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante
-elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
-
-Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar
-tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula
-ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet,
-lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
-
-Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut
-fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
-\makeletterclosing
-\clearpage
-
+%\cover
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 %\textVersion
@@ -228,64 +233,73 @@ fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitu
 % ------------- experiencia ------------- 
 \section{\sectionExeperiencia}
 
-\newcommand{\expCinco}{\cventry
-{\cityQC, \countryCN \remoto}{Paradigme3 {\refCinco{https://paradigme3.ca/}}}{\pt{Desenvolvedor Full Stack}\fr{Analyste Programmeur }\en{Programmer Analyst}}{\outubro 2022 -- \atual}{\pt{}\fr{Services-conseils en TI}\en{IT Consulting Services}}{}{
-  \vspace{-0.4cm}
-    \cventry{\junho 2024 -- \atual}{\ \ \ \ \ \ Mandate: Ministère de la Santé et des Services sociaux}{}{}{project: modernization WSTAT}{}{
-        \begin{itemize}[leftmargin=1.8cm, parsep=0cm, topsep=-0.25cm]
-            \item{\translate{}{}{};}
-            \item{\translate{}{}{};}
+\cventry{\cityQC, \countryCN \remoto}{Paradigme3 \refCinco}{\translate{\programador \hspace{0cm} \analista}{\analista \hspace{0cm} \programador}{\analista \hspace{0cm} \programador}}{\outubro 2022 -- \atual}{\pt{}\fr{Services-conseils en TI}\en{IT Consulting Services}}{}{
+    \vspace{1mm}
+    \begin{adjustwidth}{1cm}{0cm}
+        \underline{\mandato: \msss, \projeto: modernization WSTAT (\junho 2024 -- \atual)} -- \textit{\translate{Clinical Statistics for Windows® }{Statistiques cliniques pour Windows®}{}} -- \translate{ WSTAT is a tool for entering and compiling service delivery hours (HPS). WStat was developed and commissioned in 1994 and this project aims to
+renew with more modern technologies in a cloud computing environment}{est un outil de saisie et de compilation des heures de prestation de services (HPS). WStat a été développé et mis en service en 1994 et ce projet a le but de le renouveler avec des technologies plus modernes dans un environnement infonuagique}{}.
+        \medskip
+        \begin{itemize}[leftmargin=1cm, parsep=0cm, topsep=-0.25cm]
+            \item{\translate{Work in harmony with functional analysts, following specifications, for the creation of a modern web platform based in cloud services}{Travailler en consonance avec les analystes fonctionnels, en suivant les spécifications, pour la création des pages WEB avec Angular}{Trabalhar em sintonia com os analistas funcionais, seguindo as especificações, para a criação das páginas WEB com Angular};}
+            \item{\translate{Deploy the application on different environments in Azure}{Effectuer le déploiement de l'application sur différents environnements dans l'Azure}{Fazer o deploy do aplicativo em diferentes ambientes no Azure};}
+             \item{\translate{Create a modular backend structure to decouple unrelated dependencies and improve deployments}{}{}}.
         \end{itemize}
-        \vspace{0.4cm}
-        \hspace{1cm}\ambiente{Angular (TypeScript, PrimeNg, Bootstrap), Java 17 (Quarkus, Maven, JUnit, Hibernate), Git, Pull Requests review, Docker, Kubernetes, REST, Swagger, Azure Devops.}% ,  Agile, Azure Data Studio, VScode, IntelliJ, Microsoft Teams. }
-    }
-    \\
-    \cventry{\outubro 2022 -- \junho 2024}{\ \ \ \ \ \ Mandate: Ministère de la Santé et des Services sociaux}{}{}{project: SIPAD}{}{
-        \begin{itemize}[leftmargin=1.8cm, parsep=0cm, topsep=-0.25cm]
-            \item{\en{test}\fr{test}}
-            \item{\translate{}{}{};}
+        \bigskip
+        \ambiente{Java 17 (Quarkus, Maven, JUnit, Hibernate), Angular (TypeScript, PrimeNg, Bootstrap),  Microsoft SQL Server, Git, PR review, Docker, Kubernetes, Swagger, Azure DevOps.} % ,  REST, Agile, Azure Data Studio, VScode, IntelliJ, Microsoft Teams. }
+        \bigskip
+        \\
+        \underline{\mandato: \msss, \projeto: SIPAD (\outubro 2022 -- \junho 2024)} -- \textit{\translate{Information system for people with a
+deficiency}{Système d'information pour les personnes ayant une déficience}{}}.  %-- \translate{}{}{}.
+        \medskip
+        \begin{itemize}[leftmargin=1cm, parsep=0cm, topsep=-0.25cm]
+            \item{\translate{Participated in the maintenance and bug fixing of the platform with the Java language, SQL scripts and JasperReports templates}{Avez participé à la maintenance et à la correction des bugs de la plateforme avec le langage Java}{Participou na manutenção e correção de bugs da plataforma com a linguagem Java};}
+            \item{\translate{Designed tests with JMeter and evaluations with VisualVM to find low performance and crash points}{Avez conçu des tests avec JMeter et des évaluations avec VisualVM pour trouver les points de faible performance et de blocage}{Projetou testes com JMeter  e avaliações com  VisualVM para achar pontos de baixa performance e de travamento}}.
+            % \item{\translate{}{}{}}
         \end{itemize}
-        \vspace{0.4cm}
-        \hspace{1cm}\ambiente{Java (Maven, Struts 1.3, Tomcat), JMeter, VisualVM, IReports, Eclipse, Git, GitLab, Sourcetree, Oracle SQL Developer, Microsoft Teams, Agile, Jira. }
-    }
-}}
-
+        \bigskip
+        \ambiente{Java (Maven, Struts 1.3, Tomcat), Oracle SQL Developer, JMeter, IReports, VisualVM, Git, Eclipse.} %, GitLab, Sourcetree, Microsoft Teams, Agile, Jira
+    \end{adjustwidth}
+}
+\bigskip
+\bigskip
 % ------------- experiencia ------------- 
-\cventry{\citySP, \countryBR \remoto}{Stefanini Group \refQuatro}{FullStack \desenvolvedor}{\junho 2021 -- \outubro 2022}{\translate{Global Tech Consultancy}{Conseil en stratégie digitale}{}}{}{
+\cventry{\cityBSB, \countryBR \remoto}{Stefanini Group \refQuatro}{FullStack \desenvolvedor}{\junho 2021 -- \outubro 2022}{\translate{Global Tech Consultancy}{Conseil en stratégie digitale}{}}{}{
     \vspace{1mm}
     \begin{adjustwidth}{1cm}{0cm}
         \medskip
-        \underline{\projeto: \translate{Bank of}{Banque du}{Banco do} \brasil -}
+        \underline{\projeto: \translate{Bank of}{Banque du}{Banco do} \brasil} - \translate{One of the largest banks in Brazil with more than 78 million customers. Internal platform for measurements and results}{Une des plus grandes banques au Brésil comptant plus de 78 millions de clients}{}.
+        \medskip
         \begin{itemize}[leftmargin=1cm, parsep=0.1cm, topsep=-0.25cm]
-            \item{\translate{}{}{};}
-            \item{\translate{}{}{};}
+            \item{\translate{Developed microservices and organized the operations and their dependencies in a catalog}{Avez développé microservices et organisé les opérations et leurs dépendances dans un catalogue}{Desenvolveu microsserviços e organizou as operações e suas dependências em um catálogo};}
+            \item{\translate{Developed new features and migrated others from AngularJS to Angular}{Avez développé de nouvelles fonctionnalités et migré d'autres d'AngularJS à Angular}{Desenvolveu novas features e migrou outras de AngularJS para Angular};}
+            \item{\translate{Ensured code quality with SonarQube analysis and tests using Karma/JUnit}{Avez assuré de la qualité du code avec les analyses de SonarQube et test avec Karma/JUnit}{Garantiu qualidade de codigo com analises do SonarQube e teste com Karma/JUnit};}
+            \item{\translate{Managed product versions and deployments}{Avez géré des versions et des déploiements du produit}{Gerenciou versões e implantações do produto}}.
         \end{itemize}
         \bigskip
-        \ambiente{AngularJS (JavaScript, Bootstrap, Grunt, Karma, JasmineJS), Angular (TypeScript, PrimeNg, PrimeFlex, Karma, JasmineJS), Java (Quarkus, Maven, JUnit), Docker, Artifactory, Kubernetes, Rancher, ArgoCD, VScode, SonarQube, Highcharts, Git, REST, Jenkins.} %, Swagger, Eclipse, Git, Gitlab,, DBeaver, Agile, VMware Virtual Desktop Infrastructure (VDI), Microsoft Teams. }
+        \ambiente{Java (Quarkus, Maven, JUnit), Angular (TypeScript, PrimeNg, PrimeFlex, Karma, JasmineJS), AngularJS (JavaScript, Bootstrap, Grunt, Karma, JasmineJS),  Docker,  Kubernetes, Rancher, ArgoCD, SonarQube, Artifactory, Highcharts, Grafana, Git, Swagger, Jenkins.} %, VScode, Swagger, Eclipse, Git, Gitlab,, DBeaver, Agile, VMware Virtual Desktop Infrastructure (VDI), Microsoft Teams. }
     \end{adjustwidth}
 }
 \bigskip
 \bigskip
 
 % ------------- experiencia ------------- 
-\cventry{\citySP, \countryBR \remoto}{Gauge - Stefanini Group \reff{https://gauge-next-challenge.vercel.app/}}{FullStack \desenvolvedor}{\setembro 2020 -- \junho 2021}{\translate{Digital Consulting}{Conseil en stratégie digitale}{}}{}{
+\cventry{\citySP, \countryBR \remoto}{Gauge - Stefanini Group \refTres}{FullStack \desenvolvedor}{\setembro 2020 -- \junho 2021}{\translate{Digital Consulting}{Conseil en stratégie digitale}{}}{}{
     \vspace{1mm}
     \begin{adjustwidth}{1cm}{0cm}
-        \underline{\projeto: Yazigi Yconnect} - \translate{Online platform for foreign language courses belonging to the Pearson group. The platform has about 70k students per year and receives more than 5M of access per month}{Plateforme en ligne pour les cours de langues étrangères appartenant au groupe Pearson. La plateforme compte environ 70k étudiants par an et reçoit plus de 5M d’accès par mois}{Plataforma online para cursos de línguas estrangeiras que pertence ao grupo Pearson. A plataforma possui cerca de 70k alunos por ano e recebe mais de 5M de acesso por mês}.
-        \medskip
-        \begin{itemize}[leftmargin=1cm, parsep=0.1cm, topsep=0.2cm]
+        \underline{\projeto: Yazigi Yconnect} - \translate{Online platform belonging to the Brazil Pearson group for foreign language courses. The platform has about 70k students per year and receives more than 5M access per month}{Plateforme en ligne pour les cours de langues étrangères appartenant au groupe Pearson. La plateforme compte environ 70k étudiants par an et reçoit plus de 5M d'accès par mois}{Plataforma online para cursos de línguas estrangeiras que pertence ao grupo Pearson. A plataforma possui cerca de 70k alunos por ano e recebe mais de 5M de acesso por mês}.
+        \begin{itemize}[leftmargin=1cm, parsep=0.1cm, topsep=0.1cm]
              \item{\translate{Created, modified and corrected the templates for the register of new activities}{Avez créé, modifié et corrigé les modèles pour le registre des nouvelles activités}{};}
-             \item{\translate{Created correction SQL scripts for the database for activities and media}{Avez Créé des scripts SQL de correction pour la base de données pour les activités et medias}{Criou scripts SQL de correção para banco de dados para as atividades e mídias};}
-            \item{\translate{Participated in the construction of a quiz system for initial assessment of new students}{Avez Participé à la construction d’un système de quiz pour l’évaluation initiale des nouveaux élèves}{Participou da construção de um sistema de quiz para avaliação inicial de novos alunos}}
+             \item{\translate{Created SQL correction scripts for activities and media in the database}{Avez Créé des scripts SQL de correction pour les activités et medias à la base de données}{Criou scripts SQL de correção para as atividades e mídias no banco de dados};}
+            \item{\translate{Participated in the construction of a quiz system for initial assessment of new students}{Avez Participé à la construction d'un système de quiz pour l'évaluation initiale des nouveaux élèves}{Participou da construção de um sistema de quiz para avaliação inicial de novos alunos}}.
         \end{itemize}
-        \ambiente{ ReactJS (TypeScript, Axios, Bootstrap), Microsoft SQL Server, Bitbucket, Gitflow, Pull Requests review, Agile.} % Asana, VScode, TaskRow, JIRA.
+        \ambiente{ReactJS (TypeScript, Axios, Bootstrap, HTML, CSS, styled-components), .NET, Microsoft SQL Server, Bitbucket, Gitflow, PR review, Agile.} % Asana, VScode, TaskRow, JIRA.
         \bigskip
         \\
-        \underline{\projeto: Wizard Wiz.Tab} - \translate{Android application for foreign language courses belonging to the Pearson group. The application has more than 100k downloads}{Application Android pour les cours de langues étrangères appartenant au groupe Pearson. L’application a plus de 100k téléchargements}{Aplicativo Android para cursos de idiomas estrangeiros pertencente ao grupo Pearson. O aplicativo possui mais de 100k downloads}.
+        \underline{\projeto: Wizard Wiz.Tab} - \translate{Android application belonging to the Pearson Brazil  group for foreign language courses . The application has more than 100k downloads}{Application Android pour les cours de langues étrangères appartenant au groupe Pearson. L'application a plus de 100k téléchargements}{Aplicativo Android para cursos de idiomas estrangeiros pertencente ao grupo Pearson. O aplicativo possui mais de 100k downloads}.
         \medskip
         \begin{itemize}[leftmargin=1cm, parsep=0.1cm, topsep=-0.25cm]
-             \item{\translate{Answer customers's requests recorded in serviceNow regarding the production environment and make corrections to the Wiz Tab mobile app}{Répondre aux demandes des clients enregistrés sur serviceNow par rapport à l’environnement de production et effectuer les corrections à la application mobile Wiz Tab}{Atender às solicitações dos clientes registradas no serviceNow em relação ao ambiente de produção e fazer correções para o aplicativo móvel Wiz Tab};}
-            \item{\translate{Updated the version in the Google Play Store and made deploys in AWS serveless}{Mise à jour de la version dans le Google Play Store et déploiement sur AWS serveless}{Atualizou a versão na Google Play Store e fez implantações no AWS serveless}}
+             \item{\translate{Answered customer's requests recorded in ServiceNow regarding the production environment and made corrections to the Wiz.Tab mobile app}{Avez Répondu aux demandes des clients enregistrés sur ServiceNow par rapport à l'environnement de production et effectuer les corrections à la application mobile Wiz.Tab}{Atendeu às solicitações dos clientes registradas no ServiceNow em relação ao ambiente de produção e fazer correções para o aplicativo móvel Wiz.Tab};}
+            \item{\translate{Updated the version in the Google Play Store and made deploys in AWS serverless}{Mise à jour de la version dans le Google Play Store et déploiement sur AWS serverless}{Atualizou a versão na Google Play Store e fez implantações no AWS serverless}}.
         \end{itemize}
         \bigskip
         \ambiente{ React Native, ServiceNow, AWS Lambda.} % Asana, VScode, TaskRow, JIRA.
@@ -295,7 +309,7 @@ fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitu
 \bigskip
 
 % ------------- experiencia ------------- 
-\cventry{\cityBSB, \countryBR}{NExT UnB \refDois }{{\desenvolvedor} WEB}{\agosto 2018 -- \setembro 2020}{\pt{Núcleo de Pesquisa e Desenvolvimento para Excelência e Transformação do Setor Público (UnB)} \fr{Centre de recherche et développement pour le secteur public (UnB)}\en{Research and Development Center for Excellence and Transformation of the Public Sector}}{}{
+\cventry{\cityBSB, \countryBR}{NExT UnB \refDois }{\translate{\programador \hspace{0cm} \analista}{\analista \hspace{0cm} \programador}{\analista \hspace{0cm} \programador}}{\agosto 2018 -- \setembro 2020}{\translate{R\&D Center for Excellence and Organizational Transformation (UnB)}{Centre de recherche et développement pour le secteur public (UnB}{Núcleo de Pesquisa e Desenvolvimento para Excelência e Transformação do Setor Público (UnB)}}{}{
     \vspace{1mm}
     \begin{adjustwidth}{1cm}{0cm}
     %\cventry{1}{}{projeto evobiz ticshealth}{agosto 2018 -- janeiro 2020 }{}{6}{7}
@@ -304,22 +318,25 @@ fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitu
         \begin{itemize}[leftmargin=1cm, parsep=0.1cm, topsep=-0.25cm]
             \item{\translate{Participated in the architecture planning and development of web and mobile platforms}{Participé à la planification de l'architecture et au développement des plateformes web et mobile}{Participou do planejamento da arquitetura e do desenvolvimento das plateformas Web e mobile};}
             \item{\translate{Integrated the platform with the Philips Tasy and InterSystem Healthcare systems to expand the application for multiple customers}{Avez fait l'intégration avec les systèmes Philips Tasy et InterSystem Healthcare pour étendre l'application à de multiples clients}{Efetuou a integraçãoda plataforma com os sistemas Philips Tasy et InterSystem Healthcare para expandir a aplicação para múltiplos clientes};}
-            \item{\translate{Created mechanisms of notifications via mobile application, email, SMS and internal messaging system of the platform}{Avez créé des mécanismes de notification via l'application mobile, courriel, SMS et le système de messagerie interne de la plateform}{Criou mecanismos de notificações via aplicativo mobile, email, SMS e sistema de mensagens interna da plataforma}}
+            \item{\translate{Created notification mechanisms via mobile application, email, SMS, and the platform’s internal messaging system}{Avez créé des mécanismes de notification via l'application mobile, courriel, SMS et le système de messagerie interne de la plateform}{Criou mecanismos de notificações via aplicativo mobile, email, SMS e sistema de mensagens interna da plataforma}};
+            \item{\translate{Reviewed Pull Requests and led other less experienced developers}{Avez revue les PRs et dirigé d'autres développeurs moins expérimentés}{Revisou PRs e liderou outros desenvolvedores menos experientes}}.
         \end{itemize}
         \bigskip
-        \ambiente{Java (Spring Boot, JPA, Maven, Criteria Query), ReactJS \& React Native (Axios, Bootstrap), PostgreSQL, REST, Docker, Git, Firebase, Eslint.} %JavaScript, Eclipse, VScode,  Postman}
+        \ambiente{Java (Spring Boot, JPA, Maven, Criteria Query), ReactJS \& React Native (Axios, Bootstrap), PostgreSQL, REST, Docker, Git, Firebase, Eslint, PR review.} %JavaScript, Eclipse, VScode, Postman}
         \bigskip
+        
+        \break
         
         \underline{\projeto: PlataformaFor (\agosto 2018 -- \abril 2020)} - \translate{Open-source \refFor \hspace{0cm} tools to automate the administrative and budgetary processes of universities and public institutions. Currently 47 federal universities and 25 federal institutes use the platforms}{Outils open-source \refFor \hspace{0cm} pour automatiser les processus administratifs et budgétaires des universités et institutions publiques. Actuellement 47 universités fédérales et 25 instituts fédéraux utilisent les plates-formes}{Ferramentas open-source \refFor \hspace{0cm} para automatizar os processos administrativos e orçamentários des universidades e instituições públicas. Atualmente 47 universidades federais e 25 institutos federais utilizam as plataformas}.
         \medskip
         \begin{itemize}[leftmargin=1cm, parsep=0.1cm, topsep=-0.25cm]
-            \item{\translate{Worked in the conception of the platform and in the process of modeling the database from the specifications}{Avez travaillé sur la conception de la plateforme et sur le processus de modélisation de la base de données à partir des spécifications.}{Atuei na concepção da plataforma e no processo de modelagem do banco de dados à partir das especificações};}
+            \item{\translate{Worked on the conception of the platform and on modeling the database based on the specifications}{Avez travaillé sur la conception de la plateforme et sur le processus de modélisation de la base de données à partir des spécifications.}{Atuei na concepção da plataforma e no processo de modelagem do banco de dados à partir das especificações};}
             \item{\translate{Optimized slow functions, duplicated requests to the backend and database and made corrections of documented \textit{issues}}{Avez optimisé les fonctions lentes, les requêtes en double vers le back-end et la base de données et effectué des corrections de \textit{issues} documentés}{Otimizei funções lentas, requisições duplicadas ao backend e ao banco de dados e efetuei correções de \textit{issues} documentadas};}
-            \item{\translate{Used Jmeter to detect and correct bottlenecks and slowdowns on the platform when simulating multiple concurrent users}{Avez Utilisé Jmeter pour détecter et corriger les goulots d'étranglement et les ralentissements sur la plateforme en simulant plusieurs utilisateurs simultanés}{Utilisei Jmeter para econtrar e corrigir pontos de gargalo e lentidão na plataforma ao simular vários usuários simultaneos};}
-            \item{\translate{Developed tools to generate PDFs reports and to generate backup files as a way of importing/exporting data on the platform.}{Avez Développé des outils pour générer des rapports PDFs et pour générer des fichiers de \textit{backup} comme moyen d'importation/exportation des données sur la plateforme.}{Desenvolvi ferramentas para gerar relatórios PDF e para gerar arquivos de \textit{backup} como forma de importação/exportação dos dados na plataforma}}
+            \item{\translate{Used JMeter to detect and correct bottlenecks and slowdowns on the platform when simulating multiple concurrent users}{Avez Utilisé JMeter pour détecter et corriger les goulots d'étranglement et les ralentissements sur la plateforme en simulant plusieurs utilisateurs simultanés}{Utilisei JMeter para econtrar e corrigir pontos de gargalo e lentidão na plataforma ao simular vários usuários simultaneos};}
+            \item{\translate{Developed tools to generate PDF reports and to generate backup files as a way of importing/exporting data on the platform.}{Avez Développé des outils pour générer des rapports PDFs et pour générer des fichiers de \textit{backup} comme moyen d'importation/exportation des données sur la plateforme.}{Desenvolvi ferramentas para gerar relatórios PDF e para gerar arquivos de \textit{backup} como forma de importação/exportação dos dados na plataforma}}
         \end{itemize}
         \bigskip
-        \ambiente{Java (Maven, Hibernate, JMeter), ReactJS (Bootstrap, AJAX), REST, MySQL, Git.} %, Eclipse, VScode, Postman, Slack}
+        \ambiente{Java (Maven, Hibernate, JMeter), ReactJS (Bootstrap, AJAX, HTML, CSS), REST, MySQL, Git.} %, Eclipse, VScode, Postman, Slack}
     \end{adjustwidth}
 %\hspace{1cm}\ambiente{Java (Spring Boot, Spring MVC, Spring Data JPA, Maven, Criteria Query), ReactJS \& React Native (JavaScript, Axios, Bootstrap, NPM), PostgreSQL, REST, Git, Eclipse, VScode, Docker, Postman, Firebase.}\\
 %\hspace{1cm}\ambiente{Java (Vraptor4, Maven, Wildfly, Hibernate, HSQL, JMeter), ReactJS(JavaScript, Bootstrap, AJAX), REST, MySQL, Git, GitHub, Eclipse, VScode, Postman, Slack, Joomla}
@@ -334,14 +351,14 @@ fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitu
         \underline{\projeto: Topovision} - \translate{Geographic system to measure demographic information}{Système géographique pour mesurer les informations démographiques}{Sistema geográfico para medir informações demográficas}.
         \medskip
         \begin{itemize}[leftmargin=1cm, parsep=0.1cm, topsep=-0.25cm]
-            \item{\translate{Created literal and spatial queries to combine custom filters for the platforme Topovision}{Créer des requêtes littérales et spatiales pour combiner des filtres personnalisés pour la plateforme Topovision}{};}
-            \item{\translate{Created automated scripts to verify the integrity of collected data}{Avez créé des scripts automatisés pour vérifier l'intégrité des données collectées};}
-             \item{\translate{Deployed a Jenkins's server to automate analytics and increase speed in data correction by internal employees}{Avez implanté un serveur Jenkins pour automatiser l'analyse et augmenter la vitesse de correction des données par les employés internes}{};}
+            \item{\translate{Created complex literal and spatial queries to combine custom filters for the platform Topovision}{Créer des requêtes littérales et spatiales complexes pour combiner des filtres personnalisés pour la plateforme Topovision}{Criou consultas literais e espaciais complexas para combinar filtros personalizados para a plataforma Topovision};}
+            \item{\translate{Created automated scripts to verify the integrity of collected data}{Avez créé des scripts automatisés pour verifier l'intégrité des données collectées}{};}
+             \item{\translate{Deployed a Jenkins server to automate the analysis and increase speed in data correction by internal employees}{Avez implanté un serveur Jenkins pour automatiser l'analyse et augmenter la vitesse de correction des données par les employés internes}{};}
              \item{\translate{Deployed a local Git server and migrated all the projects from subversion}{Avez implanté un serveur Git local et migré tous les projets de Subversion}{};}
-             \item{\translate{Planned automated and functional tests in the application}{Avez a planifié des tests automatisés et fonctionnels dans l'application}{};}
+             \item{\translate{Planned automated and functional tests in the application}{Avez a planifié des tests automatisés et fonctionnels dans l'application}{}}.
         \end{itemize}
         \bigskip
-    \ambiente{Groovy (Grails), JavaScript (Jquery, JasmineJS), Selenium, PostgreSQL, PostGIS, Jenkins, Subversion, Git, JasperReports, Qgis, Linux.}%, Netbeans, PuTTY,*/ Linux}
+    \ambiente{Groovy (Grails), JavaScript (jQuery, JasmineJS, HTML), Selenium, PostgreSQL, PostGIS, Jenkins, Subversion, Git, JasperReports, QGIS, Linux.}%, Netbeans, PuTTY,*/ Linux}
     \end{adjustwidth}
 }
 \bigskip
